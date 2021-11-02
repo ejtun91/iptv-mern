@@ -1,0 +1,149 @@
+.snackbar {
+  background-color: rgb(90, 216, 40);
+}
+
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: none;
+  z-index: 5;
+}
+
+.Overlay.Show {
+  display: block;
+}
+
+.Modal {
+  position: fixed;
+  bottom: -150vh;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 0 12px 12px;
+  transition: all 0.2s ease-out;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 10;
+  width: 50%;
+  height: 400px;
+
+  .topPart {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100px;
+
+    .checkBtn {
+      padding: 10px 20px;
+      background-color: rgb(90, 216, 40);
+      border-radius: 10px;
+      cursor: pointer;
+      color: whitesmoke;
+      border: none;
+
+      &:hover {
+        background-color: rgb(72, 170, 33);
+      }
+    }
+  }
+  .line {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .bottomPart {
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    .leftBottom {
+      padding: 5px;
+      height: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 19px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      .iconCopy {
+        -webkit-user-select: auto;
+        user-select: auto;
+        cursor: pointer;
+        font-size: 28px;
+        padding: 10px;
+        border-radius: 40%;
+        transition: 0.2s ease-out;
+
+        &:hover {
+          background-color: rgb(233, 229, 229);
+        }
+      }
+    }
+    .rightBottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 1em;
+      height: 55%;
+      font-weight: 600;
+
+      .icon {
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.Modal.Show {
+  bottom: 0;
+  z-index: 999;
+}
+
+.Close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Modal {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    height: 300px;
+
+    .bottomPart {
+      width: 100%;
+      padding: 5px;
+      .leftBottom {
+        font-size: 13px;
+        width: 45%;
+      }
+      .rightBottom {
+        font-size: 14px;
+        width: 45%;
+
+        .icon {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

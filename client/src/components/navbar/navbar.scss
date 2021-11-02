@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&display=swap");
+
+.navbar {
+  display: flex;
+  position: relative;
+  .navbarWrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    background-color: rgb(1, 151, 64);
+    height: 50px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 5px 5px rgba(175, 175, 175, 0.59);
+    box-shadow: 5px 5px 5px 5px rgba(175, 175, 175, 0.59);
+    margin-top: 0.5em;
+
+    .logo {
+      margin-left: 3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logoTitle {
+        font-size: 25px;
+        text-transform: uppercase;
+        color: rgb(218, 216, 216);
+        font-family: "Reem Kufi", sans-serif;
+        cursor: pointer;
+      }
+    }
+
+    .socialIcons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-right: 2em;
+
+      .icon {
+        color: rgb(218, 216, 216);
+        cursor: pointer;
+
+        &:hover {
+          color: rgb(2, 241, 102);
+        }
+      }
+    }
+  }
+  .regLogin {
+    height: 50px;
+    position: absolute;
+    top: 0.5em;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .reg {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      .regLink {
+        color: rgb(1, 151, 64);
+        font-size: 20px;
+        padding: 5px;
+      }
+      .link {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        &:hover {
+          background-color: rgb(2, 241, 102);
+          color: white;
+          border-radius: 5px;
+        }
+      }
+    }
+    .salut {
+      color: rgb(1, 151, 64);
+      font-size: 20px;
+      padding: 5px;
+    }
+    .logout {
+      color: rgb(1, 151, 64);
+      font-size: 20px;
+      padding: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      text-decoration: underline;
+
+      &:hover {
+        background-color: rgb(2, 241, 102);
+        color: white;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .uploadContainer {
+    position: absolute;
+    top: 0.5em;
+    right: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    .upload {
+      color: white;
+      font-size: 20px;
+      padding: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      background-color: rgb(1, 151, 64);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: rgb(2, 241, 102);
+        color: white;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+
+    .navbarWrapper {
+      .logo {
+        margin-left: 1em;
+        .logoTitle {
+          font-size: 18px;
+        }
+      }
+      .socialIcons {
+        margin-right: 1em;
+        .icon {
+          font-size: 18px;
+        }
+      }
+    }
+    .regLogin {
+      left: 10px;
+      flex-direction: column;
+      .reg {
+        flex-direction: column;
+        gap: 0.5em;
+
+        .regLink {
+          font-size: 15px;
+          padding: 0;
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+      .salut {
+        font-size: 15px;
+      }
+      .logout {
+        font-size: 15px;
+      }
+    }
+    .uploadContainer {
+      right: 5px;
+      .upload {
+        font-size: 0px;
+      }
+    }
+  }
+}

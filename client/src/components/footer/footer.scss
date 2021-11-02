@@ -1,0 +1,28 @@
+.footer {
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px 5px rgba(175, 175, 175, 0.59);
+  box-shadow: 5px 5px 5px 5px rgba(175, 175, 175, 0.59);
+  margin-bottom: 0.5em;
+  background-color: rgb(1, 151, 64);
+  height: 50px;
+  width: 60%;
+
+  .footerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    span {
+      color: rgb(219, 217, 217);
+      font-size: 17px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    width: 95%;
+    height: 30px;
+  }
+}

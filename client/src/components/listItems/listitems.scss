@@ -1,0 +1,25 @@
+.listItem {
+  margin-top: 1.5em;
+  .listItemWrapper {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 1em;
+    justify-content: center;
+
+    .itemLink {
+      width: max-content;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .listItem {
+    .listItemWrapper {
+      width: 98%;
+      .itemLink {
+        width: 100%;
+      }
+    }
+  }
+}
